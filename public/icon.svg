@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgUni" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="100%" stop-color="#3730a3" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bgUni)" />
+  <!-- Graduation Cap -->
+  <path d="M256 128 L80 216 L256 304 L432 216 Z" fill="#ffffff" />
+  <path d="M152 260 V336 C152 360, 256 392, 256 392 C256 392, 360 360, 360 336 V260 L256 312 Z" fill="#e0e7ff" />
+  <!-- Tassel -->
+  <path d="M404 230 V320 L394 335 L414 335 Z" fill="url(#goldGrad)" />
+  <circle cx="256" cy="216" r="14" fill="url(#goldGrad)" />
+  <!-- Sparkles -->
+  <polygon points="100,140 106,120 112,140 132,146 112,152 106,172 100,152 80,146" fill="#fde047" />
+  <polygon points="410,120 415,104 420,120 436,125 420,130 415,146 410,130 394,125" fill="#fde047" />
+</svg>

@@ -1,0 +1,6 @@
+{
+  "name": "MYCIN Expert System - Hệ Chuyên Gia Chẩn Đoán Y Tế",
+  "description": "Hệ chuyên gia chẩn đoán bệnh theo mô hình suy diễn Certainty Factor (CF) của MYCIN với gợi ý triệu chứng thông minh và quản lý tri thức bệnh học.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
