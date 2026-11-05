@@ -12,8 +12,10 @@ workflows:
         script: npm install @capacitor/cli @capacitor/ios --save-dev --legacy-peer-deps
       - name: Build web assets
         script: npm run build
-      - name: Sync Capacitor iOS platform
-        script: npx cap sync ios
+      - name: Add and sync Capacitor iOS platform
+        script: |
+          npx cap add ios || true
+          npx cap sync ios
       - name: Build ipa
         script: |
           cd ios/App
