@@ -10,17 +10,13 @@ workflows:
         script: npm install --legacy-peer-deps
       - name: Build web assets
         script: npm run build
-      - name: Initialize Capacitor iOS platform
-        script: |
-          if [ ! -d "ios" ]; then
-            npx cap add ios
-          fi
-          npx cap sync ios
+      - name: Sync Capacitor iOS platform
+        script: npx cap sync ios
       - name: Build ipa
         script: |
           cd ios/App
           xcodebuild -workspace App.xcworkspace -scheme App -sdk iphoneos -configuration Release archive -archivePath $HOME/build/App.xcarchive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
-          xcodebuild -exportArchive -archivePath $HOME/build/App.xcarchive -exportOptionsPlist ExportOptions.plist -exportPath $HOME/export || true
+          xcodebuild -exportArchive -archivePath $HOME/build/App.xcarchive -exportPath $HOME/export -allowProvisioningUpdates || true
     artifacts:
       - $HOME/export/*.ipa
       - ios/App/build/outputs/ipa/*.ipa
