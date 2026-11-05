@@ -9,7 +9,7 @@ workflows:
       - name: Install dependencies
         script: npm install --legacy-peer-deps
       - name: Install Capacitor CLI explicitly
-        script: npm install @capacitor/cli @capacitor/ios --save-dev
+        script: npm install @capacitor/cli @capacitor/ios --save-dev --legacy-peer-deps
       - name: Build web assets
         script: npm run build
       - name: Sync Capacitor iOS platform
