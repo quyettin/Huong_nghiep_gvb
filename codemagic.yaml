@@ -27,4 +27,6 @@ workflows:
     artifacts:
       - $HOME/export/*.ipa
       - ios/App/build/outputs/ipa/*.ipa
-      - $HOME/Library/Developer/Xcode/DerivedData/*/Build/Products/Release-iphoneos/*.ipa
+      - ios/build/export/*.ipa
+      - build/ios/ipa/*.ipa
+      - **/*.ipa
