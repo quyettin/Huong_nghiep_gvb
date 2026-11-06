@@ -25,8 +25,8 @@ workflows:
           xcodebuild -workspace App.xcworkspace -scheme App -sdk iphoneos -configuration Release archive -archivePath $HOME/build/App.xcarchive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
           xcodebuild -exportArchive -archivePath $HOME/build/App.xcarchive -exportPath $HOME/export -allowProvisioningUpdates || true
     artifacts:
-      - $HOME/export/*.ipa
-      - ios/App/build/outputs/ipa/*.ipa
-      - ios/build/export/*.ipa
-      - build/ios/ipa/*.ipa
-      - **/*.ipa
+      - "$HOME/export/*.ipa"
+      - "ios/App/build/outputs/ipa/*.ipa"
+      - "ios/build/export/*.ipa"
+      - "build/ios/ipa/*.ipa"
+      - "build/**/*.ipa"
