@@ -42,3 +42,4 @@ workflows:
       - "ios/App/build/outputs/ipa/*.ipa"
       - "ios/build/export/*.ipa"
       - "build/**/*.ipa"
+      - "build/**/*.ipa"
