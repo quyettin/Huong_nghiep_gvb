@@ -6,19 +6,10 @@ workflows:
       node: latest
       xcode: latest
     scripts:
-      - name: Install project dependencies
+      - name: Install dependencies
         script: npm install --legacy-peer-deps
-      - name: Install Capacitor packages explicitly
-        script: npm install @capacitor/core @capacitor/cli @capacitor/ios --legacy-peer-deps
-      - name: Build web assets
-        script: npm run build
-      - name: Initialize Capacitor config and add iOS platform
-        script: |
-          if [ ! -f "capacitor.config.json" ] && [ ! -f "capacitor.config.ts" ]; then
-            npx @capacitor/cli init "Huong Nghiep GVB" "com.example.huongnghiepgvb" --web-dir dist || true
-          fi
-          npx @capacitor/cli add ios || true
-          npx @capacitor/cli sync ios
+      - name: Sync Capacitor
+        script: npx cap sync ios
       - name: Build ipa
         script: |
           cd ios/App
